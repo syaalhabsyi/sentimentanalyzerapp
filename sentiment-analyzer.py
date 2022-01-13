@@ -25,7 +25,7 @@ count_neutral = 0
 if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
     for i in range(input_df.shape[0]):
-        url = 'https://aisentimentanalyzer.herokuapp.com/classify/?text='+str(input_df.iloc[i])
+        url = 'https://aisentimentanalyzer.herokuapp.com/classify/?text='+str(input_df.iloc[i,0])
         r = requests.get(url)
         result = r.json()["text_sentiment"]
         if result=='positive':
