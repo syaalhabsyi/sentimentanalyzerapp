@@ -1,3 +1,4 @@
+import json
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -27,7 +28,7 @@ if uploaded_file is not None:
     for i in range(input_df.shape[0]):
         url = 'https://aisentimentanalyzer.herokuapp.com/classify/?text='+str(input_df.iloc[i])
         r = requests.get(url)
-        result = r.json()['text_sentiment']
+        result = r.json()["text_sentiment"]
         if result=='positive':
             count_positive+=1
         elif result=='negative':
