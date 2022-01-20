@@ -29,6 +29,7 @@ if uploaded_file is not None:
         url = 'https://aisentimentanalyzer.herokuapp.com/classify/?text='+str(input_df.iloc[i])
         headers = {
             'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36",
+            "Accept-Encoding": "*",
             "Connection": "keep-alive"
         }
         r = requests.get(url,headers=headers)
