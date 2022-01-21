@@ -11,7 +11,7 @@ from streamlit.script_runner import StopException, RerunException
 import urllib
 
 fig = go.Figure()
-st.write("""# Sentiments Analysis App ✌""")
+st.write("""# Sentiments Analysis App """)
 
 st.write('Sentiment analysis is the interpretation and classification of emotions (positive, negative and neutral) within text data using text analysis techniques. Sentiment analysis tools allow businesses to identify customer sentiment toward products, brands or services in online feedback.')
 st.set_option('deprecation.showfileUploaderEncoding', False)
