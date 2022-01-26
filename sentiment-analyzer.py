@@ -45,11 +45,11 @@ if uploaded_file is not None:
     y = [count_positive, count_negative, count_neutral]
 
     if count_positive>count_negative:
-        st.write("""# Great Work there! Majority of people liked your product 😃""")
+        st.write("""# Great Work there! Majority of people liked your product""")
     elif count_negative>count_positive:
-        st.write("""# Try improving your product! Majority of people didn't find your product upto the mark 😔""")
+        st.write("""# Try improving your product! Majority of people didn't find your product upto the mark """)
     else:
-        st.write("""# Good Work there, but there's room for improvement! Majority of people have neutral reactions to your product 😶""")
+        st.write("""# Good Work there, but there's room for improvement! Majority of people have neutral reactions to your product """)
         
     layout = go.Layout(
         title = 'Multiple Reviews Analysis',
@@ -65,14 +65,12 @@ elif single_review:
     r = requests.get(url)
     result = r.json()["text_sentiment"]
     if result=='positive':
-        st.write("""# Great Work there! You got a Positive Review 😃""")
+        st.write("""# Great Work there! You got a Positive Review """)
     elif result=='negative':
-        st.write("""# Try improving your product! You got a Negative Review 😔""")
+        st.write("""# Try improving your product! You got a Negative Review """)
     else:
-        st.write("""# Good Work there, but there's room for improvement! You got a Neutral Review 😶""")
+        st.write("""# Good Work there, but there's room for improvement! You got a Neutral Review """)
 
 else:
     st.write("# ⬅ Enter user input from the sidebar to see the nature of the review.")
 
-#st.sidebar.subheader("""Created with 💖 in India by """)
-#st.sidebar.image('logo.jpg', width = 300)
