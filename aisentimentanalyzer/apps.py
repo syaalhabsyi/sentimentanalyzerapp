@@ -13,5 +13,5 @@ class AisentimentanalyzerConfig(AppConfig):
     # these will be accessible via this class
     with open(path, 'rb') as pickled:
         data = pickle.load(pickled)
-    model = data['classifier']
-    vectorizer = data['cv']
+    model = data['model']
+    vectorizer = data['vectorizer']
